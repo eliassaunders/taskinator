@@ -206,10 +206,13 @@ var deleteTask = function(taskId) {
 };
 
 var saveTasks = function() {
-localStorage.setItem("tasks", tasks)
+localStorage.setItem("tasks", JSON.stringify(tasks));
 
 }
 
+var loadTasks = function() {
+  localStorage.getItem("")
+}
 // Create a new task
 formEl.addEventListener("submit", taskFormHandler);
 
